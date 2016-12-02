@@ -96,7 +96,7 @@
 下载nodejs和git bash安装hexo打开git base,输入npm install -g hexo建立博客的文件夹（hexoblog），输入 hexo init hexobloghexo就会在当前目录下创建hexoblog文件夹
 进入hexoblog文件夹，执行npm install会在hexoblog目录中安装node_modules
 运行hex">
-<meta property="og:updated_time" content="2016-11-04T06:53:08.336Z">
+<meta property="og:updated_time" content="2016-11-04T08:06:16.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nextblog">
 <meta name="twitter:description" content="hexo结合github搭建个人博客
@@ -110,7 +110,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -147,7 +147,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -277,8 +277,15 @@
 <h4 id="进入hexoblog文件夹，执行npm-install"><a href="#进入hexoblog文件夹，执行npm-install" class="headerlink" title="进入hexoblog文件夹，执行npm install"></a>进入hexoblog文件夹，执行npm install</h4><p>会在hexoblog目录中安装node_modules</p>
 <h4 id="运行hexo-server，输入hexo-server-或者hexo-s"><a href="#运行hexo-server，输入hexo-server-或者hexo-s" class="headerlink" title="运行hexo server，输入hexo server(或者hexo s)"></a>运行hexo server，输入hexo server(或者hexo s)</h4><h4 id="如果要创建新的文章，输入hexo-new-layout"><a href="#如果要创建新的文章，输入hexo-new-layout" class="headerlink" title="如果要创建新的文章，输入hexo new [layout]"></a>如果要创建新的文章，输入hexo new [layout]</h4><h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>There are three default layouts in Hexo: post, page and draft.<br>Files created by each of them is saved to a different path.<br>Newly created posts are saved to the source/_posts folder.<br>||Layout || path<br>|| post || source/_posts<br>|| page || source<br>|| draft || source/_drafts</p>
 <h3 id="Filename"><a href="#Filename" class="headerlink" title="Filename"></a>Filename</h3><p>By default, Hexo uses the post title as its filename. You can<br>edit the new_post_name setting in _config.yml to change the<br>default filename. For example, :year-:month-:day-:title.md<br>will prefix filenames with the post creation date. You can<br>use the following placeholders:<br>||Placeholder||Description<br>||:title||Post title (lower case, with spaces replaced by hyphens)<br>||:year||Created year, e.g. 2015<br>||:month||Created month (leading zeros), e.g. 04<br>||:i_month||Created month (no leading zeros), e.g. 4<br>||:day||Created day (leading zeros), e.g. 07<br>||:i_day||Created day (no leading zeros), e.g. 7</p>
-<h3 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h3><p>github上先创建kaisajiang.github.io.git的仓库，要有master分支<br>部署到github前需要配置_config.yml文件，在最后面加上下面的内容<br>deploy:<br>type: git<br>repository: git@github.com:kaisajiang/kaisajiang.github.io.git<br>branch: master<br>给电脑授予github权限，执行 ssh-keygen -t rsa -C “用户名”<br>打开生成的id_rsa.pub文件，复制里面所有的内容到github上添加ssh keygen</p>
+<h3 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h3><p>github上先创建kaisajiang.github.io.git的仓库，要有master分支<br>部署到github前需要配置_config.yml文件，在最后面加上下面的内容<br>deploy:<br>type: git<br>repository: git@github.com:kaisajiang/kaisajiang.github.io.git<br>branch: master<br>给电脑授予github权限，执行 ssh-keygen -t rsa -C “username”<br>打开生成的id_rsa.pub文件，复制里面所有的内容到github上添加ssh keygen<br>还是提交不了的话，要下载这个npm install hexo-deployer-git –save</p>
 <h4 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h4><p>hexo clean/hexo generate/hexo d</p>
+<h4 id="更换next主题"><a href="#更换next主题" class="headerlink" title="更换next主题"></a>更换next主题</h4><p>进入博客目录，下载next，git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
+<h4 id="更换为中文"><a href="#更换为中文" class="headerlink" title="更换为中文"></a>更换为中文</h4><p>_config.yml中配置language: zh-Hans</p>
+<h4 id="添加链接"><a href="#添加链接" class="headerlink" title="添加链接"></a>添加链接</h4><p>next中的_config.yml中配置<br>social:<br>  GitHub: <a href="https://github.com/kaisajiang" target="_blank" rel="external">https://github.com/kaisajiang</a></p>
+<h4 id="主题风格"><a href="#主题风格" class="headerlink" title="主题风格"></a>主题风格</h4><p>next中的_config.yml中配置，有三种风格：</p>
+<p>#scheme: Muse</p>
+<p>#scheme: Mist<br>scheme: Pisces</p>
+<h4 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h4><p>next中的_config.yml中配置<br>avatar: /images/kaisajiang.jpg</p>
 
       
     </div>
@@ -311,6 +318,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/02/MongoDB/" rel="prev" title="MongoDB">
+                MongoDB <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -378,7 +389,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -421,7 +432,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载nodejs和git-bash"><span class="nav-number">1.</span> <span class="nav-text">下载nodejs和git bash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.</span> <span class="nav-text">安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#打开git-base-输入npm-install-g-hexo"><span class="nav-number">2.1.</span> <span class="nav-text">打开git base,输入npm install -g hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立博客的文件夹（hexoblog），输入-hexo-init-hexoblog"><span class="nav-number">2.2.</span> <span class="nav-text">建立博客的文件夹（hexoblog），输入 hexo init hexoblog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进入hexoblog文件夹，执行npm-install"><span class="nav-number">2.3.</span> <span class="nav-text">进入hexoblog文件夹，执行npm install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行hexo-server，输入hexo-server-或者hexo-s"><span class="nav-number">2.4.</span> <span class="nav-text">运行hexo server，输入hexo server(或者hexo s)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果要创建新的文章，输入hexo-new-layout"><span class="nav-number">2.5.</span> <span class="nav-text">如果要创建新的文章，输入hexo new [layout]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#layout"><span class="nav-number">3.</span> <span class="nav-text">layout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filename"><span class="nav-number">4.</span> <span class="nav-text">Filename</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到github上"><span class="nav-number">5.</span> <span class="nav-text">部署到github上</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#部署步骤"><span class="nav-number">5.1.</span> <span class="nav-text">部署步骤</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载nodejs和git-bash"><span class="nav-number">1.</span> <span class="nav-text">下载nodejs和git bash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.</span> <span class="nav-text">安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#打开git-base-输入npm-install-g-hexo"><span class="nav-number">2.1.</span> <span class="nav-text">打开git base,输入npm install -g hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立博客的文件夹（hexoblog），输入-hexo-init-hexoblog"><span class="nav-number">2.2.</span> <span class="nav-text">建立博客的文件夹（hexoblog），输入 hexo init hexoblog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进入hexoblog文件夹，执行npm-install"><span class="nav-number">2.3.</span> <span class="nav-text">进入hexoblog文件夹，执行npm install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行hexo-server，输入hexo-server-或者hexo-s"><span class="nav-number">2.4.</span> <span class="nav-text">运行hexo server，输入hexo server(或者hexo s)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果要创建新的文章，输入hexo-new-layout"><span class="nav-number">2.5.</span> <span class="nav-text">如果要创建新的文章，输入hexo new [layout]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#layout"><span class="nav-number">3.</span> <span class="nav-text">layout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filename"><span class="nav-number">4.</span> <span class="nav-text">Filename</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到github上"><span class="nav-number">5.</span> <span class="nav-text">部署到github上</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#部署步骤"><span class="nav-number">5.1.</span> <span class="nav-text">部署步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更换next主题"><span class="nav-number">5.2.</span> <span class="nav-text">更换next主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更换为中文"><span class="nav-number">5.3.</span> <span class="nav-text">更换为中文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加链接"><span class="nav-number">5.4.</span> <span class="nav-text">添加链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题风格"><span class="nav-number">5.5.</span> <span class="nav-text">主题风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置头像"><span class="nav-number">5.6.</span> <span class="nav-text">设置头像</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
